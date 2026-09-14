@@ -16,7 +16,7 @@ from varats.data.reports.blame_interaction_graph import (
 from varats.experiments.vara.blame_report_experiment import (
     BlameReportExperiment,
 )
-from experiments.vara.cfg_report_experiment import (
+from experiments.cfg_report_experiment import (
     CFCollectiveReportExperiment,
     CFDirectReportExperiment,
 )
