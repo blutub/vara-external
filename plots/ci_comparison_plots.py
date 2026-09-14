@@ -739,8 +739,8 @@ class _RankDifferencePlot(_PairPlot, plot_name=None):
     def _rank_difference(self) -> tp.Tuple[CaseStudy, AnalysisComparison, pd.DataFrame]:
         case_study, comparison, left_commit, right_commit = self._context()
         if self.metric == "node":
-            left_values = __import__("varats.data.reports.commit_interaction_comparison", fromlist=["unique_neighbor_degrees"]).unique_neighbor_degrees(left_commit)
-            right_values = __import__("varats.data.reports.commit_interaction_comparison", fromlist=["unique_neighbor_degrees"]).unique_neighbor_degrees(right_commit)
+            left_values = __import__("reports.commit_interaction_comparison", fromlist=["unique_neighbor_degrees"]).unique_neighbor_degrees(left_commit)
+            right_values = __import__("reports.commit_interaction_comparison", fromlist=["unique_neighbor_degrees"]).unique_neighbor_degrees(right_commit)
         else:
             left_author = create_author_interaction_graph(left_commit, case_study.project_name)
             right_author = create_author_interaction_graph(right_commit, case_study.project_name)
